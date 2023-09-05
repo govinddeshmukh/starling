@@ -1,0 +1,61 @@
+@import "../../styles/Variable.scss";
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    &__content{
+        width: 25rem;
+        height: 10rem;
+        // border: 1px solid red;
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+        &__left{
+            width: 40%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: .2rem;
+            }
+
+        }
+        &__right{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items:flex-start;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding: 1rem;
+            padding-bottom: 1rem;
+            &__leftbox{
+                // border: 1px solid red;
+                height: max-content;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                p{
+                    font-weight: 300;
+                    font-size: 1rem;
+                }
+                
+            }
+            &__rightbox{
+                width: 100%;
+                height: 3px;
+                background-color: $texthover;
+                color: white;
+                text-align: center;
+                line-height: 30px;
+                transition: width 0.2s ease-out;
+            }
+        }
+    }
+
+}

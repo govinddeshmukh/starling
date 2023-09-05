@@ -1,0 +1,420 @@
+@import "../../styles/Variable.scss";
+
+
+.navbar{
+    width: 100%;
+    height: max-content;
+    background: $backgoround;
+    color: $textcolor;
+    position: relative;
+    @include breakpoint (md) {
+        width: 100%;
+        height: max-content;
+    }
+    &__uppernav{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        // border: 1px solid $texthover;
+        position: fixed;
+        background: $backgoround;
+        top: 0;
+        z-index: 5;
+        @include breakpoint (md) {
+            width: 100%;
+            height: 80px;
+            // border: 1px solid red;
+            padding: 0 1rem;
+        }
+        &__left{
+            display: flex;
+            align-items: center;
+            width: 10rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            p:nth-child(1){
+                width: 2.8rem;
+                height: 2.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: $logoback;
+                font-size: 2rem;
+                font-weight: 900;
+                padding-right: .5rem;
+                font-family: $MontiCarlo;
+            }
+            p:nth-child(2){
+                font-size: 1.5rem;
+                line-height: 1.4rem;
+                font-weight: 700;
+                margin-left: .5rem;
+
+            }
+            
+        }
+        &__right{
+            // border: 1px solid $texthover;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 20rem;
+            height: 100%;
+            @include breakpoint (md) {
+                width: 10rem;
+            }
+            button{
+                // width: 10rem;
+                border: none;
+                outline: none;
+                font-weight: 700;
+                padding: .5rem .8rem;
+                border-radius: 5rem;
+                font-size: 1rem;
+                background: $texthover;
+                color: $backgoround;
+                @include breakpoint (md) {
+                    padding: .3rem .5rem;
+                }
+                &:hover{
+                    background: $btnhover;
+                }
+            }
+            &__content{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                // border: 1px solid red;
+                align-items: center;
+                justify-content: flex-start;
+                @include breakpoint (md) {
+                    display: none;
+                }
+                &:hover{
+                    color: $texthover;
+                    svg{
+                        stroke: $texthover;
+                    }
+                    
+                    p{
+                        color: $texthover;
+                    }
+                }
+                &__svg{
+                    // border: 1px solid yellow;
+                    width: 4rem;
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    SVG{
+
+                        &:hover{
+                            fill: $texthover;
+                        }
+                    }
+
+                }
+                p{
+                    width: 8rem;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    // border: 1px solid greenyellow;
+                    line-height: 1.2rem;
+                    font-size: .9rem;
+
+                }
+            }
+            &__menuicon{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                display: none;
+                @include breakpoint (md) {
+                    display: block;
+                }
+                &__checkbox {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    z-index: 2;
+                    -webkit-touch-callout: none;
+                    position: absolute;
+                    opacity: 0;
+                }
+                div {
+                    margin: auto;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 29px;
+                    height: 12px;
+                }
+                span{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+            
+                    background-color: White;
+                    border-radius: 1px;
+                    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+            
+                    &:first-of-type {
+                        top: 0;
+                    }
+                    &:last-of-type {
+                        bottom: 0;
+                    }
+                }
+                &.active,
+                &__checkbox:checked + div {
+                    span {
+                        &:first-of-type {
+                            transform: rotate(45deg);
+                            top: 5px;
+                        }
+                        &:last-of-type {
+                            transform: rotate(-45deg);
+                            
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__lowernavbox{
+        width: 100%;
+        height: max-content;
+        background: $backgoround;
+        color: $textcolor;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        flex-direction: column;
+        transition: .5s;
+        // position: fixed;
+        @include breakpoint (md) {
+            width: 100%;
+            height: max-content;
+            position: fixed;
+            transition: .5s;
+            right: -100%;
+        }
+        // position: fixed;
+        &__lowernav{
+            background: $backgoround;
+            color: $textcolor;
+            width: 100%;
+            position: fixed;
+            top: 80px;
+            z-index: 1;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.5rem;
+            border: 1px solid rgba(2, 2, 43, 0.603);
+            transition: .5s;
+            @include breakpoint (md) {
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding:1rem 0;
+                gap: 1rem;
+            }
+            
+            &__left{
+                // border: 1px solid $texthover;
+                width: 38rem;
+                display: flex;
+                justify-content: space-between;
+                @include breakpoint (md) {
+                    width: 100%;
+                    padding: .5rem .8rem;
+                    // border: 1px solid red;
+                    flex-direction: column;
+
+                } 
+                li{
+                    width: max-content;
+                    position: relative;
+                    cursor: pointer;
+                    // border: 1px solid yellow;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include breakpoint (md) {
+                        width: 100%;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding:1rem .8rem;
+                    }
+                    span{
+                        display: none;
+                        @include breakpoint (md) {
+                            display: block;
+                        }
+                    }
+                  &:hover{
+                    color: $texthover;
+                  }
+                    &::after{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: $texthover;
+                        position: absolute;
+                        left: 0;
+                        bottom: 1px;
+                        transition: .5s ease all;
+                        @include breakpoint (md){
+                            width: 0;
+                            height: 0;  
+                           }
+                    }
+                    &:hover::after,
+                    &.active::after{
+                        color: $texthover;
+                        width:100%;
+                       
+                    }
+                }
+            }
+            &__right{
+                
+                padding: .5rem .8rem;
+                width: 25rem;
+                display: flex;
+                justify-content: space-between;
+                @include breakpoint (md) {
+                    width: 100%;
+                    // border: 1px solid $texthover;
+                    flex-direction: column;
+                } 
+                li{
+                    width: max-content;
+                    cursor: pointer;
+                    @include breakpoint (md) {
+                        // border: 1px solid yellow;
+                        font-size: 1.2rem;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding:1rem .8rem;
+                        font-size: 300;
+
+                    }
+                    &:hover{
+                        color: $texthover;
+                    }
+                    span{
+                        display: none;
+                        @include breakpoint (md) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &__btn{
+                display: none;
+                @include breakpoint (md) {
+                    display: block;
+                    width: 100%;
+                    height: 10rem;
+                    // border: 1px solid greenyellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-top: 1.3rem;
+                }
+                li{ 
+                    width: 18rem;
+                    height: 3.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                    
+                    border: 1px solid $textcolor;
+                    border-radius: 3.5rem;
+                    font-size: 1.3rem;
+                    list-style: none;
+                    margin: .5rem 0;
+                    &:nth-child(2){
+                        background: $texthover;
+                        color: $backgoround;
+                        border-color: transparent;
+
+                        &:hover{
+                            background: $btnhover;
+                        }
+                    }
+                }
+
+            }
+        }
+        &__tabbox{
+            margin-top: 150px;
+            width: 100%;
+            height: max-content;
+            background: $backgoround;
+            padding: 2rem 0;
+           @include breakpoint (md){
+            width: 100%;
+            min-height: 100vh;
+            border: 1px solid red;
+           }
+
+        }
+        .right{
+            @include breakpoint (md){
+                right: 0%;
+            }
+        }
+    }
+    .right{
+
+        @include breakpoint (md) {
+
+            right: 0;
+            transition: .5s;
+        }
+        
+    }
+    
+}
+
+.hide{
+    top: -80px;
+}
+
+.none{
+    display: none;
+}
+
+.active{
+    color: $texthover;
+}
+.block{
+    display: block;
+  
+}
