@@ -42,7 +42,8 @@ export default function Navbar() {
           }
         };
       }
-    },[lastScrollY]);
+    });
+
     console.log(showtab)
   return (
     <div className={styles.navbar}>
