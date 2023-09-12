@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./First.module.scss"
-import {IoIosArrowBack, IoIosArrowForward, IoMdAdd} from "react-icons/io";
+import {IoIosArrowBack,  IoMdAdd} from "react-icons/io";
 export default function First({showtab,setshowtab, setshownav, shownav}) {
   const [show, setshow] = useState(1);
   const width = window.screen.width;

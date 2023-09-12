@@ -1,6 +1,6 @@
 @import "../../styles//Variable.scss";
 .home{
-    width: 100%;
+    width: 100vw;
     height: max-content;
     // padding-top: 250px;
     padding:12rem 2rem;
@@ -155,7 +155,7 @@
                 &__left{
                     // padding: 2rem;
                     display: flex;
-                    align-items: end;
+                    align-items: flex-end;
                     width: 50%;
                     @include breakpoint (md) {
                         width: 100%;
@@ -170,7 +170,7 @@
                 &__right{
                     width: 50%;
                     display: flex;
-                    align-items: end;
+                    align-items: flex-end;
                     @include breakpoint (md) {
                         width: 100%;
                         // border: 1px solid purple;
@@ -187,8 +187,8 @@
                 width: 100%;
                 height: 55%;
                 display: flex;
-                align-items: end;
-                justify-content: end;
+                align-items: flex-end;
+                justify-content: flex-end;
                 @include breakpoint (md) {
                     width: 100%;
                     height: max-content;
@@ -317,7 +317,7 @@
                     
                     display: flex;
                     padding: .5rem;
-                    align-items: end;
+                    align-items: flex-end;
                     @include breakpoint (md) {
                         padding: 0;
                     }
@@ -351,7 +351,7 @@
                             height: 100%;
                             display: flex;
                             align-items:flex-start;
-                            justify-content: end;
+                            justify-content: flex-end;
                             flex-direction: column;
                             padding-bottom: 1rem;
                             padding: .5rem;
@@ -443,7 +443,7 @@
                 
                 display: flex;
                 align-items: center;
-                justify-content: start;
+                justify-content: flex-start;
                 padding: 1rem;
                 @include breakpoint (md) {
                     width: 100%;
@@ -495,8 +495,8 @@
                             height: 40%;
                             display: flex;
                             flex-direction: column;
-                            align-items: end;
-                            justify-content: end;
+                            align-items: flex-end;
+                            justify-content: flex-end;
                             
                             padding-bottom: .5rem;
                             &__head{
@@ -532,7 +532,7 @@
                 @include breakpoint (md) {
                     width: 100%;
                     padding:1rem 0;
-                    justify-content: end;
+                    justify-content: flex-end;
                 }
                 &__box{
                     width: 20rem;
@@ -580,8 +580,8 @@
                             height: 40%;
                             display: flex;
                             flex-direction: column;
-                            align-items: end;
-                            justify-content: end;
+                            align-items: flex-end;
+                            justify-content: flex-end;
                             
                             padding-bottom: .5rem;
                             &__head{
@@ -612,7 +612,7 @@
                 
                 display: flex;
                 align-items: center;
-                justify-content: end;
+                justify-content: flex-end;
                 padding: 1rem;
                 @include breakpoint (md){
                     width: 100%;
@@ -663,8 +663,8 @@
                             height: 40%;
                             display: flex;
                             flex-direction: column;
-                            align-items: end;
-                            justify-content: end;
+                            align-items: flex-end;
+                            justify-content: flex-end;
                             
                             padding-bottom: .5rem;
                             &__head{
@@ -837,13 +837,14 @@
                 }
             }
             &__foot{
-                margin-top: 2rem;
+                margin-top: 4rem;
                 width: 100%;
                 height: 20%;
                 padding: 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                // border: 1px solid red;
                 
             }
         }
@@ -940,8 +941,8 @@
                             height: 40%;
                             display: flex;
                             flex-direction: column;
-                            align-items: end;
-                            justify-content: end;
+                            align-items: flex-end;
+                            justify-content: flex-end;
                             
                             padding-bottom: .5rem;
                             &__head{
@@ -973,7 +974,7 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: end;
+                justify-content: flex-end;
             }
             img{
                 border-radius: 1rem;
@@ -1210,7 +1211,7 @@
                 
                 display: flex;
                 align-items: center;
-                justify-content: end;
+                justify-content: flex-end;
                 @include breakpoint (md) {
                     padding:1rem 0;
                 }
@@ -1250,7 +1251,7 @@
                 
                 display: flex;
                 align-items: center;
-                justify-content: end;
+                justify-content: flex-flex-end;
                 @include breakpoint (md) {
                     padding:1rem 0;
                 }
@@ -1382,7 +1383,7 @@
                     padding: 1rem;
                     flex: 1;
                     display: flex;
-                    align-items: end;
+                    align-items: flex-end;
                     justify-content: center;
                     &__img{
                         width: 80%;
@@ -1393,7 +1394,7 @@
                     padding: 1rem;
                     flex: 1;
                     display: flex;
-                    align-items: flex-end;
+                    align-items: flex-flex-end;
                     justify-content: center;
                     &__img{
                         width: 80%;

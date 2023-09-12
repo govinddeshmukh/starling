@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./Fourth.module.scss"
-import { IoIosArrowBack, IoIosArrowForward, IoMdAdd } from 'react-icons/io'
+import { IoIosArrowBack,  IoMdAdd } from 'react-icons/io'
 export default function Fourth({showtab,setshowtab, setshownav, shownav}) {
   const [show, setshow] = useState(0);
   const width = window.screen.width;
